@@ -1,0 +1,1 @@
+# nesse arquivo crio função próprias para tratar e criar variáveis em meus Data Frames de acordo com a minha visão de negócio

@@ -5,7 +5,7 @@ import os
 arquivo_entrada = ""
 
 # Pasta de saída
-pasta_saida = "/data/merge/break"
+pasta_saida = "/data/merge/split"
 
 
 def dividir_csv_pandas(caminho_arquivo, linhas_por_arquivo=5000):
@@ -23,7 +23,7 @@ def dividir_csv_pandas(caminho_arquivo, linhas_por_arquivo=5000):
     # O chunksize lê o arquivo em pedaços para não sobrecarregar a memória
     for i, chunk in enumerate(pd.read_csv(caminho_arquivo, chunksize=linhas_por_arquivo, sep=";")):
         # Cria o nome do novo arquivo (ex: dados_parte_0.csv, dados_parte_1.csv)
-        nome_saida = f"/data/merge/break/{nome_base}_{i + 1}.csv"
+        nome_saida = f"/data/merge/split/{nome_base}_{i + 1}.csv"
 
         # Salva o pedaço, removendo o índice numérico do pandas
         chunk.to_csv(nome_saida, index=False, sep=";")
