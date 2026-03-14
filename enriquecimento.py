@@ -85,7 +85,7 @@ Lat/Lng: {resultado['lat']} , {resultado['lng']}
 # CARREGAR BASE
 # =========================
 
-df_base = pd.read_csv("cameras_saneadas_all.csv" , sep=",")
+df_base = pd.read_csv("df_base.csv" , sep=",")
 
 df_base[COLUNA_CEP] = df_base[COLUNA_CEP].apply(normalizar_cep)
 
